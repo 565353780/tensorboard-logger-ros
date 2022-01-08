@@ -1,6 +1,6 @@
-# TensorBoard Logger
+# TensorBoard Logger ROS
 
-Only support `scalar`, `histogram`, `image`, `audio` `text` and `projector` at the moment.
+Support `scalar`, `histogram`, `image`, `audio` `text` and `projector`.
 
 ## Install
 
@@ -8,9 +8,23 @@ Only support `scalar`, `histogram`, `image`, `audio` `text` and `projector` at t
 sudo apt install libprotobuf-dev protobuf-compiler
 ```
 
+## Build
+
+### Use CMake
 ```bash
-> mkdir build && cd build && cmake .. && cmake --build . -j
-> cd .. && mkdir demo && ./tensorboard_logger_test
-> tensorboard --logdir .  # try adding --load_fast=false if you don't see projector tab
+mkdir build && cd build && cmake .. && cmake --build . -j
+cd .. && mkdir demo && ./tensorboard_logger_test
+tensorboard --logdir ./ --host 0.0.0.0
 ```
+
+### Use Catkin
+
+```bash
+catkin build
+rosrun tensorboard_logger_ros tensorboard_logger_ros_node
+rosrun tensorboard_logger_ros try_tensorboard_logger_ros
+tensorboard --logdir ./tf_log/ --host 0.0.0.0
+```
+
+## Enjoy it~
 
