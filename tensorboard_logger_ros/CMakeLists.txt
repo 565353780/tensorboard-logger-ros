@@ -67,6 +67,10 @@ target_link_libraries(${PROJECT_NAME}_node
     tensorboard_logger
 )
 
+add_dependencies(${PROJECT_NAME}_node
+  ${${PROJECT_NAME}_EXPORTED_TARGETS}
+)
+
 target_compile_features(${PROJECT_NAME}_node
   PRIVATE
     cxx_std_17
@@ -91,6 +95,10 @@ add_executable(tensorboard_logger_test
 
 target_link_libraries(tensorboard_logger_test
   tensorboard_logger
+)
+
+add_dependencies(tensorboard_logger_test
+  ${${PROJECT_NAME}_EXPORTED_TARGETS}
 )
 
 target_compile_features(tensorboard_logger_test
