@@ -84,6 +84,10 @@ target_link_libraries(try_${PROJECT_NAME}
   ${catkin_LIBRARIES}
 )
 
+add_dependencies(try_${PROJECT_NAME}
+  ${${PROJECT_NAME}_EXPORTED_TARGETS}
+)
+
 target_compile_features(try_${PROJECT_NAME}
   PRIVATE
     cxx_std_17
