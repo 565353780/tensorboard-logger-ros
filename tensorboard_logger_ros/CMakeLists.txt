@@ -1,9 +1,6 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(tensorboard_logger_ros)
 
-# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
-# set (CMAKE_CXX_STANDARD 17)
-
 find_package(catkin REQUIRED COMPONENTS
   std_msgs
   roscpp

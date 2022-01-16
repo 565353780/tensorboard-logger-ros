@@ -35,5 +35,25 @@ rosrun tensorboard_logger_ros try_tensorboard_logger_ros
 tensorboard --logdir ./tf_log/ --host 0.0.0.0
 ```
 
+## Custom Usage
+
+### Add package dependency
+add
+```bash
+tensorboard_logger_ros
+```
+to CMakeLists.txt in your own package
+```bash
+find_package(catkin REQUIRED COMPONENTS
+    tensorboard_logger_ros
+)
+```
+
+### Add service client
+see
+```bash
+tensorboard_logger_ros/src/try_TensorBoardLoggerServer.cpp
+```
+
 ## Enjoy it~
 

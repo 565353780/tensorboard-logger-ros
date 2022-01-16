@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node pkg="tensorboard_logger_ros" name="TensorBoardLoggerServer" type="tensorboard_logger_ros_node" output="screen"/>
+
+</launch>
+
