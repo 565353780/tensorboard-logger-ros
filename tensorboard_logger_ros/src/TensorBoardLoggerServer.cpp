@@ -4,7 +4,7 @@ bool TensorBoardLoggerServer::logScalarCallback(
     tensorboard_logger_ros::ScalarToBool::Request &req,
     tensorboard_logger_ros::ScalarToBool::Response &res)
 {
-  std::cout << "Start TensorBoardLogger serve!" << std::endl;
+  // std::cout << "Start TensorBoardLogger serve!" << std::endl;
 
   const std::string name = req.scalar.name;
   const size_t step = req.scalar.step;
