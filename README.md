@@ -49,6 +49,16 @@ find_package(catkin REQUIRED COMPONENTS
 )
 ```
 
+and add
+```bash
+tensorboard_logger_ros
+```
+to package.xml in your own package
+```bash
+<depend>tensorboard_logger_ros</depend>
+)
+`
+
 ### Add service client
 see
 ```bash
