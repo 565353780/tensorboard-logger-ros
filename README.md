@@ -5,7 +5,7 @@ Support `scalar`, `histogram`, `image`, `audio` `text` and `projector`.
 ## Install
 
 ```bash
-sudo apt install libprotobuf-dev protobuf-compiler
+./setup.sh
 ```
 
 ## Build
